@@ -12,7 +12,7 @@ import { slugifyStr } from "@/utils/slugify";
 import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
 import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
 import { SITE } from "@/config";
-
+import Comment from "@/components/Comment.astro";
 export interface Props {
   post: CollectionEntry<"blog">;
   posts: CollectionEntry<"blog">[];
@@ -163,6 +163,7 @@ const nextPost =
         )
       }
     </div>
+	          <Comment />
   </main>
   <Footer />
 </Layout>
@@ -288,3 +289,4 @@ const nextPost =
     window.scrollTo({ left: 0, top: 0, behavior: "instant" })
   );
 </script>
+
